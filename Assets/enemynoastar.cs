@@ -31,6 +31,18 @@ public class enemynoastar : MonoBehaviour
         }
         Debug.Log("takedamge");
     }
+    public void takedamagefire(int damge)
+    {
+       
+        anim.SetTrigger("hurt");
+        health -= damge;
+        if (health < 0)
+        {
+            anim.SetTrigger("die");
+
+        }
+        Debug.Log("takedamge");
+    }
     public void die()
     {
         Destroy(gameObject);

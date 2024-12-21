@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class hitskill : MonoBehaviour
 {
+    public int phantram;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("enemy"))
@@ -15,9 +16,14 @@ public class hitskill : MonoBehaviour
         }
         else if (collision.CompareTag("enemy2"))
         {
+            phantram = Random.Range(1, 10);
+            burn burnfire;
+            burnfire = collision.gameObject.GetComponent<burn>();
             enemynoastar enemyheath;
             enemyheath = collision.gameObject.GetComponent<enemynoastar>();
-            enemyheath.takedamage(4);
+            enemyheath.takedamage(2);
+            if (phantram == 1||phantram==2||phantram==3||phantram==4)
+            burnfire.chay = true;
 
         }
         //tan cong boss 
