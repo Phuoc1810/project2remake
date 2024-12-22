@@ -35,6 +35,9 @@ public class player : MonoBehaviour
 
     [SerializeField] private GameObject panel_UIPlayer;
     [SerializeField] private GameObject Canvas_HealBar;
+
+    //tham chieu den Watermelon
+    public Watermelon watermelon;
     // Start is called before the first frame update
     void Start()
     {
@@ -108,6 +111,14 @@ public class player : MonoBehaviour
         {
             anim.SetFloat("moveX", moveX);
             anim.SetFloat("moveY", moveY);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            if(watermelon != null)
+            {
+                watermelon.UseWatermelon();
+            }
         }
     }
     public void Combo()
