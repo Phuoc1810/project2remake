@@ -1,9 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
-public class hitskill : MonoBehaviour
+public class skillblood : MonoBehaviour
 {
     public int phantram;
     private void OnTriggerEnter2D(Collider2D collision)
@@ -17,15 +16,15 @@ public class hitskill : MonoBehaviour
         }
         else if (collision.CompareTag("enemy2"))
         {
-            phantram = Random.Range(1, 10);
-            burn burnfire;
-            burnfire = collision.gameObject.GetComponent<burn>();
+
+            blood bloodstatus;
+            bloodstatus = collision.gameObject.GetComponent<blood>();
             enemynoastar enemyheath;
             enemyheath = collision.gameObject.GetComponent<enemynoastar>();
             enemyheath.takedamage(2);
-            if (phantram == 1 || phantram == 2 || phantram == 3 || phantram == 4)
-                burnfire.chay = true;
-            
+            bloodstatus.count++;
+            bloodstatus.bloodstatus = true;
+
 
         }
         //tan cong boss 
