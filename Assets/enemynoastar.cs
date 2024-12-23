@@ -36,14 +36,15 @@ public class enemynoastar : MonoBehaviour
        
         anim.SetTrigger("hurt");
         health -= damge;
-        if (health < 0)
+        if (health <= 0)
         {
             anim.SetTrigger("die");
+           
 
         }
         Debug.Log("takedamge");
     }
-    public void die()
+    public void chet()
     {
         Destroy(gameObject);
     }

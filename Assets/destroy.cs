@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class destroy : MonoBehaviour
 {
-    public void Destroyblood()
+    public GameObject blood;
+   public void Destroyblood()
     {
-        Destroy(gameObject);
+        blood.SetActive(false);
     }
 }

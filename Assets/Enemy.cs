@@ -44,8 +44,5 @@ public class Enemy : MonoBehaviour
         }
         Debug.Log("takedamge");
     }
-    public void die()
-    {
-        Destroy(gameObject);
-    }
+    
 }

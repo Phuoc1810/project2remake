@@ -25,7 +25,7 @@ public class skillblood : MonoBehaviour
             enemyheath = collision.gameObject.GetComponent<enemynoastar>();
             enemyheath.takedamage(2);
             bloodstatus.count++;
-            if(bloodstatus.count==0)
+            if(bloodstatus.count<=5)
             bloodstatus.bloodstatus = true;
 
 
