@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 
 public class skillblood : MonoBehaviour
 {
     public int phantram;
+    
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("enemy"))
@@ -23,6 +25,7 @@ public class skillblood : MonoBehaviour
             enemyheath = collision.gameObject.GetComponent<enemynoastar>();
             enemyheath.takedamage(2);
             bloodstatus.count++;
+            if(bloodstatus.count==0)
             bloodstatus.bloodstatus = true;
 
 
