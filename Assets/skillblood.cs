@@ -9,14 +9,8 @@ public class skillblood : MonoBehaviour
     
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("enemy"))
-        {
-            Enemy enemyheath;
-            enemyheath = collision.gameObject.GetComponent<Enemy>();
-            enemyheath.takedamage(4);
-
-        }
-        else if (collision.CompareTag("enemy2"))
+        
+         if (collision.CompareTag("enemy2"))
         {
 
             blood bloodstatus;

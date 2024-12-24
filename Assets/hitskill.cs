@@ -8,14 +8,8 @@ public class hitskill : MonoBehaviour
     public int phantram;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("enemy"))
-        {
-            Enemy enemyheath;
-            enemyheath = collision.gameObject.GetComponent<Enemy>();
-            enemyheath.takedamage(4);
-
-        }
-        else if (collision.CompareTag("enemy2"))
+        
+        if (collision.CompareTag("enemy2"))
         {
             phantram = Random.Range(1, 10);
             burn burnfire;
