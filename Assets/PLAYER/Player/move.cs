@@ -146,7 +146,6 @@ public class player : MonoBehaviour
         {
             // bat trang thai tan cong
             attacking = true;
-            AudioManager.instance.PlayOneShotAudio(attackSound);
 
             //tang gia tri bien dem compo ktr xem vuot bien dem chua
             combo += 1;
@@ -190,8 +189,6 @@ public class player : MonoBehaviour
         {
             //tru hp
             stats.currenthp -= healCost;
-
-            AudioManager.instance.PlayOneShotAudio(attackSound2);
             //bat trang thai tan cong
             attacking = true;
             //kich hoat animation tan conng
@@ -261,8 +258,6 @@ public class player : MonoBehaviour
         {
             //tru mana
             starts.currentmp -= manaCost;
-
-            AudioManager.instance.PlayOneShotAudio(attackSound3);
             // bat trang thai tan cong
             attacking = true;
 
@@ -291,5 +286,17 @@ public class player : MonoBehaviour
             combo = 1;
         }
 
+    }
+    public void SoundAttack1()
+    {
+        AudioManager.instance.PlayOneShotAudio(attackSound);
+    }
+    public void SoundAttack2()
+    {
+        AudioManager.instance.PlayOneShotAudio(attackSound2);
+    }
+    public void SoundAttack3()
+    {
+        AudioManager.instance.PlayOneShotAudio(attackSound3);
     }
 }
