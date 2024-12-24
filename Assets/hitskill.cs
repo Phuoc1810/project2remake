@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class hitskill : MonoBehaviour
@@ -7,14 +8,8 @@ public class hitskill : MonoBehaviour
     public int phantram;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("enemy"))
-        {
-            Enemy enemyheath;
-            enemyheath = collision.gameObject.GetComponent<Enemy>();
-            enemyheath.takedamage(4);
-
-        }
-        else if (collision.CompareTag("enemy2"))
+        
+        if (collision.CompareTag("enemy2"))
         {
             phantram = Random.Range(1, 10);
             burn burnfire;
@@ -22,8 +17,9 @@ public class hitskill : MonoBehaviour
             enemynoastar enemyheath;
             enemyheath = collision.gameObject.GetComponent<enemynoastar>();
             enemyheath.takedamage(2);
-            if (phantram == 1||phantram==2||phantram==3||phantram==4)
-            burnfire.chay = true;
+            if (phantram == 1 || phantram == 2 || phantram == 3 || phantram == 4)
+                burnfire.chay = true;
+            
 
         }
         //tan cong boss 

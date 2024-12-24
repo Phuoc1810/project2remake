@@ -36,6 +36,11 @@ public class player : MonoBehaviour
     [SerializeField] private GameObject panel_UIPlayer;
     [SerializeField] private GameObject Canvas_HealBar;
 
+    //am thanh tan cong
+    public AudioClip attackSound;
+    public AudioClip attackSound2;
+    public AudioClip attackSound3;
+
     //tham chieu den Watermelon
     public Watermelon watermelon;
     // Start is called before the first frame update
@@ -184,7 +189,6 @@ public class player : MonoBehaviour
         {
             //tru hp
             stats.currenthp -= healCost;
-
             //bat trang thai tan cong
             attacking = true;
             //kich hoat animation tan conng
@@ -282,5 +286,17 @@ public class player : MonoBehaviour
             combo = 1;
         }
 
+    }
+    public void SoundAttack1()
+    {
+        AudioManager.instance.PlayOneShotAudio(attackSound);
+    }
+    public void SoundAttack2()
+    {
+        AudioManager.instance.PlayOneShotAudio(attackSound2);
+    }
+    public void SoundAttack3()
+    {
+        AudioManager.instance.PlayOneShotAudio(attackSound3);
     }
 }
