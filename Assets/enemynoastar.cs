@@ -57,6 +57,6 @@ public class enemynoastar : MonoBehaviour
     public void ngangchuyendong()
     {
       
-        enemy.speed = 4;
+        enemy.speed = 2;
     }
 }

@@ -38893,6 +38893,11 @@ PrefabInstance:
       propertyPath: enemy
       value: 
       objectReference: {fileID: 580589836}
+    - target: {fileID: 5772343848908451837, guid: 90d86367c85898b49bedda32af6c0cc7,
+        type: 3}
+      propertyPath: m_AngularDrag
+      value: 0.66
+      objectReference: {fileID: 0}
     - target: {fileID: 8772730021375619647, guid: 90d86367c85898b49bedda32af6c0cc7,
         type: 3}
       propertyPath: enemy
@@ -48983,6 +48988,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: NightBorne_0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5689062563946008856, guid: 44b0d72e65afd3b4cbf7ddb8031e98eb,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
