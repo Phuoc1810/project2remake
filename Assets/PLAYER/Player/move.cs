@@ -94,7 +94,7 @@ public class player : MonoBehaviour
            
         }
 
-        if(rolltime<=0&&rollonce==true)
+        else if(rolltime<=0&&rollonce==true)
         {
             anim.SetBool("roll", false);
             speed -= rollboost;

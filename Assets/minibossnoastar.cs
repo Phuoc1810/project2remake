@@ -1,17 +1,16 @@
-using Pathfinding;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class enemynoastar : MonoBehaviour
+public class minibossnoastar : MonoBehaviour
 {
     public int health;
 
- 
+
     private Animator anim;
     public Transform enemymove;
-  
-    public enemyfollow enemy;
+    public miniboss boss;
+    
 
     private void Start()
     {
@@ -20,17 +19,17 @@ public class enemynoastar : MonoBehaviour
 
     public void takedamage(int damge)
     {
-        enemy = GetComponent<enemyfollow>();
         
-       
+
+        boss = GetComponent<miniboss>();
         if (transform.localScale.x == -1f)
             enemymove.position = new Vector2(enemymove.position.x + 0.5f, enemymove.position.y);
         if (transform.localScale.x == 1f)
             enemymove.position = new Vector2(enemymove.position.x - 0.5f, enemymove.position.y);
         anim.SetTrigger("hurt");
+        boss.speed = 0;
         
-        enemy.speed = 0;
-        
+
         if (health < 0)
         {
             anim.SetTrigger("die");
@@ -40,15 +39,15 @@ public class enemynoastar : MonoBehaviour
     }
     public void takedamagefire(int damge)
     {
-       
+
         anim.SetTrigger("hurt");
         health -= damge;
         if (health <= 0)
         {
-            anim.SetTrigger("die");         
-                
+            anim.SetTrigger("die");
+
         }
-        
+
     }
     public void die()
     {
@@ -56,7 +55,7 @@ public class enemynoastar : MonoBehaviour
     }
     public void ngangchuyendong()
     {
-      
-        enemy.speed = 4;
+        boss.speed = 3;
+        
     }
 }

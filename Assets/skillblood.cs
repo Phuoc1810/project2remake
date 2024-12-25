@@ -9,8 +9,19 @@ public class skillblood : MonoBehaviour
     
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        
-         if (collision.CompareTag("enemy2"))
+        if (collision.CompareTag("miniboss"))
+        {
+            
+            blood bloodstatus;
+            bloodstatus = collision.gameObject.GetComponent<blood>();
+            minibossnoastar minibossheath;
+            minibossheath = collision.gameObject.GetComponent<minibossnoastar>();
+            minibossheath.takedamage(2);
+            bloodstatus.count++;
+            if (bloodstatus.count <= 5)
+                bloodstatus.bloodstatus = true;
+        }
+        if (collision.CompareTag("enemy2"))
         {
 
             blood bloodstatus;
