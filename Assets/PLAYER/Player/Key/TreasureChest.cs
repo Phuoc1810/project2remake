@@ -20,6 +20,7 @@ public class TreasureChest : MonoBehaviour
         {
             isOpen = true;
             KeyManager.instance.AddKey();
+            Watermelon.instance.AddWatermelon();
             OpenChest();
             ShowNotification();
             Debug.Log("Nguoi choi da nhan duoc key tu vung dat");
