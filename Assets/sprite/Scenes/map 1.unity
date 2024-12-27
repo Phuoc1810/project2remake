@@ -48984,6 +48984,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Golem_-_Eagle1
       objectReference: {fileID: 0}
+    - target: {fileID: 3504320775887775458, guid: 9d240d94bf336d648927db1684cbd68d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3896768190854209502, guid: 9d240d94bf336d648927db1684cbd68d,
         type: 3}
       propertyPath: target

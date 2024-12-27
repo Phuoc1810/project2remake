@@ -28,7 +28,7 @@ public class enemynoastar : MonoBehaviour
         if (transform.localScale.x == 1f)
             enemymove.position = new Vector2(enemymove.position.x - 0.5f, enemymove.position.y);
         anim.SetTrigger("hurt");
-        
+        health -= damge;
         enemy.speed = 0;
         
         if (health < 0)
