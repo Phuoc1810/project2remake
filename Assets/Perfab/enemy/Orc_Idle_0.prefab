@@ -176,6 +176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b62405a2ab5989949bbd809d391f6ac5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemy: {fileID: 4128129777957369466}
   attackcooldown: 4
   ranger: 1.4
   ColliderDistance: 0.4
@@ -229,6 +230,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 30
   enemymove: {fileID: 2357677731693134078}
+  enemy: {fileID: 4128129777957369466}
 --- !u!114 &4128129777957369466
 MonoBehaviour:
   m_ObjectHideFlags: 0

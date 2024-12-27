@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class flyenemy : MonoBehaviour
+public class minibossdamege : MonoBehaviour
 {
-    public enemyfollow enemy;
-  
+   
+    public miniboss boss;
     [SerializeField] private float attackcooldown;
     [SerializeField] private float ranger;
     [SerializeField] private float ColliderDistance;
@@ -30,8 +30,8 @@ public class flyenemy : MonoBehaviour
     private void Update()
     {
 
-        enemy = GetComponent<enemyfollow>();
-     
+        
+        boss = GetComponent<miniboss>();
         cooldowntimer += Time.deltaTime;
         if (playerinsight())
         {
@@ -40,10 +40,10 @@ public class flyenemy : MonoBehaviour
             {
                 //attack
                 cooldowntimer = 0;
-               
+
                 anim.SetTrigger("attack1");
+                boss.speed = 0;
                
-                enemy.speed = 0;
 
             }
         }
@@ -54,10 +54,10 @@ public class flyenemy : MonoBehaviour
             {
 
                 cooldowntimer = 0;
-               
+
                 anim.SetTrigger("attack2");
-              
-                enemy.speed = 0;
+                boss.speed = 0;
+                
 
             }
         }

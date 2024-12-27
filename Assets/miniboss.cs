@@ -12,6 +12,7 @@ public class miniboss : MonoBehaviour
     public Animator anim;
     public float timetele=10;
     public GameObject playerposition;
+    public bool move = true;
     private void Start()
     {
         playerposition = GameObject.FindGameObjectWithTag("Player");
@@ -30,7 +31,9 @@ public class miniboss : MonoBehaviour
                 lineOfSite *= 2;
             }
             anim.SetTrigger("walk");
-            transform.position = Vector2.MoveTowards(this.transform.position, player.position, speed * Time.deltaTime);
+            
+                transform.position = Vector2.MoveTowards(this.transform.position, player.position, speed * Time.deltaTime);
+            
             timetele -= Time.deltaTime;
             if (timetele <= 0)
             {
