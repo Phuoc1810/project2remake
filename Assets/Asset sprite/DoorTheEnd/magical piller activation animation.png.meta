@@ -1,0 +1,950 @@
+fileFormatVersion: 2
+guid: 302be2f89100fbd48a8cea3f957ee440
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: magical piller activation animation_0
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 1280
+        width: 182
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96c02a6b82fe8184eaa6e2cffa8aa7a2
+      internalID: 1415588516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magical piller activation animation_1
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 1280
+        width: 184
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 587dc5d30184bf54b80a1ea55154f208
+      internalID: 1942892811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magical piller activation animation_2
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 1280
+        width: 185
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4dbafa4a1b50ea49972fe218544db52
+      internalID: 958395763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magical piller activation animation_3
+      rect:
+        serializedVersion: 2
+        x: 805
+        y: 1280
+        width: 183
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9e78e0f8687e024b9aa2558be5a64cc
+      internalID: 348367880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magical piller activation animation_4
+      rect:
+        serializedVersion: 2
+        x: 1060
+        y: 1280
+        width: 185
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51a36f71c148dcc478302a846b12e731
+      internalID: 1003038688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magical piller activation animation_5
+      rect:
+        serializedVersion: 2
+        x: 1319
+        y: 1280
+        width: 179
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcc0f31944573cd42a720f399e6d321c
+      internalID: 389479456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magical piller activation animation_6
+      rect:
+        serializedVersion: 2
+        x: 1574
+        y: 1280
+        width: 180
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e98a5b1e43229b74f978d05646521d65
+      internalID: 906673909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magical piller activation animation_7
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 1024
+        width: 182
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa18330bbe67f704dbc82ceb8fae6e37
+      internalID: -1154928343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magical piller activation animation_8
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 1024
+        width: 184
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e7e66d20f064624e9f76d2947569b6c
+      internalID: -1058332148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magical piller activation animation_9
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 1024
+        width: 185
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 448e66594eb830a4ba223139e3d1b5db
+      internalID: -1782857471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magical piller activation animation_10
+      rect:
+        serializedVersion: 2
+        x: 805
+        y: 1024
+        width: 184
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 644da5b52fc45c14db80c4cdb9bd2150
+      internalID: -16485850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magical piller activation animation_11
+      rect:
+        serializedVersion: 2
+        x: 1060
+        y: 1024
+        width: 185
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4156d42c183edf54ca3c8855331b1221
+      internalID: -951452486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magical piller activation animation_12
+      rect:
+        serializedVersion: 2
+        x: 1319
+        y: 1024
+        width: 179
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a454bd39cf0bf6a458c75dac9a5bfc65
+      internalID: -541372818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magical piller activation animation_13
+      rect:
+        serializedVersion: 2
+        x: 1574
+        y: 1024
+        width: 180
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1c42c92c815fff4d884836ffcae9541
+      internalID: 802014790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magical piller activation animation_14
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 768
+        width: 182
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bcf7157aceee704ab6e794a59c5d7a9
+      internalID: 1410388179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magical piller activation animation_15
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 512
+        width: 182
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 378d17e21cf93e0499a053a5fd5bb111
+      internalID: 1495217156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magical piller activation animation_16
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 256
+        width: 182
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c8a26032730a90458bf50f8ddb16c48
+      internalID: -197366410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magical piller activation animation_17
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 0
+        width: 182
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8f1f3ecb1ebad544b35d8eb0d181059
+      internalID: 1742364534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magical piller activation animation_18
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 768
+        width: 184
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 781456a91df0c9e40a1be53f59ca5344
+      internalID: 1454946735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magical piller activation animation_19
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 512
+        width: 184
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86a19d583ef704d49aadd5f7f2ac27ae
+      internalID: -2101311263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magical piller activation animation_20
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 256
+        width: 184
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c11406f4894a64e4a8f9c7713c83dca1
+      internalID: 1345547989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magical piller activation animation_21
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 0
+        width: 184
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7ee9a0a45c353e4e9b4dc4faeb0b18c
+      internalID: -1318922620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magical piller activation animation_22
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 768
+        width: 185
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b6e600947a683a4191cbfd32f96e0f0
+      internalID: -1186049746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magical piller activation animation_23
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 512
+        width: 185
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 921acd28ce9148b42b84dd9509ade2e2
+      internalID: 1827368251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magical piller activation animation_24
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 256
+        width: 185
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34a79cfeeac4f6b4481175c27fd8dc85
+      internalID: 310494346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magical piller activation animation_25
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 0
+        width: 184
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f2a8c6b91784a14995a14cc75217bad
+      internalID: -1762470966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magical piller activation animation_26
+      rect:
+        serializedVersion: 2
+        x: 805
+        y: 768
+        width: 184
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ab176d15e0ddd34d87fd09a02d05a64
+      internalID: -574357958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magical piller activation animation_27
+      rect:
+        serializedVersion: 2
+        x: 1060
+        y: 768
+        width: 185
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b0c32304f878f744a9ec6ed879bca88
+      internalID: -714631716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magical piller activation animation_28
+      rect:
+        serializedVersion: 2
+        x: 1319
+        y: 768
+        width: 179
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db7b7ff3cf3b2744e959ea6b1954e5e4
+      internalID: -2055160158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magical piller activation animation_29
+      rect:
+        serializedVersion: 2
+        x: 1615
+        y: 806
+        width: 128
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ccccd7c00fc4ec42af64d0ec9b23714
+      internalID: 2014800786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magical piller activation animation_30
+      rect:
+        serializedVersion: 2
+        x: 1319
+        y: 512
+        width: 179
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7b00569a88bd76488d598cc5230e13c
+      internalID: -1331681344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magical piller activation animation_31
+      rect:
+        serializedVersion: 2
+        x: 1319
+        y: 256
+        width: 179
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b95a59a20b47954b8a79b869850d7f8
+      internalID: -158304814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magical piller activation animation_32
+      rect:
+        serializedVersion: 2
+        x: 805
+        y: 511
+        width: 184
+        height: 257
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a77cd49e273e57844be045f6837af731
+      internalID: 1817596252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magical piller activation animation_33
+      rect:
+        serializedVersion: 2
+        x: 805
+        y: 256
+        width: 184
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 777d6db2523ada940a630086ae1faf32
+      internalID: -2061745132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magical piller activation animation_34
+      rect:
+        serializedVersion: 2
+        x: 805
+        y: 0
+        width: 184
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9b6adec565220c45980b4430662d24a
+      internalID: -1637738614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magical piller activation animation_35
+      rect:
+        serializedVersion: 2
+        x: 1060
+        y: 512
+        width: 185
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e942f03940b84404087488dc60f5fb8b
+      internalID: 1253646292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magical piller activation animation_36
+      rect:
+        serializedVersion: 2
+        x: 1060
+        y: 256
+        width: 185
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 591b452b82c64fb4ebecccc2ef337870
+      internalID: 430783073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magical piller activation animation_37
+      rect:
+        serializedVersion: 2
+        x: 1059
+        y: 128
+        width: 185
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0eea87e96cfb9441b8b5a007890fffe
+      internalID: 1090491194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      magical piller activation animation_0: 1415588516
+      magical piller activation animation_1: 1942892811
+      magical piller activation animation_10: -16485850
+      magical piller activation animation_11: -951452486
+      magical piller activation animation_12: -541372818
+      magical piller activation animation_13: 802014790
+      magical piller activation animation_14: 1410388179
+      magical piller activation animation_15: 1495217156
+      magical piller activation animation_16: -197366410
+      magical piller activation animation_17: 1742364534
+      magical piller activation animation_18: 1454946735
+      magical piller activation animation_19: -2101311263
+      magical piller activation animation_2: 958395763
+      magical piller activation animation_20: 1345547989
+      magical piller activation animation_21: -1318922620
+      magical piller activation animation_22: -1186049746
+      magical piller activation animation_23: 1827368251
+      magical piller activation animation_24: 310494346
+      magical piller activation animation_25: -1762470966
+      magical piller activation animation_26: -574357958
+      magical piller activation animation_27: -714631716
+      magical piller activation animation_28: -2055160158
+      magical piller activation animation_29: 2014800786
+      magical piller activation animation_3: 348367880
+      magical piller activation animation_30: -1331681344
+      magical piller activation animation_31: -158304814
+      magical piller activation animation_32: 1817596252
+      magical piller activation animation_33: -2061745132
+      magical piller activation animation_34: -1637738614
+      magical piller activation animation_35: 1253646292
+      magical piller activation animation_36: 430783073
+      magical piller activation animation_37: 1090491194
+      magical piller activation animation_4: 1003038688
+      magical piller activation animation_5: 389479456
+      magical piller activation animation_6: 906673909
+      magical piller activation animation_7: -1154928343
+      magical piller activation animation_8: -1058332148
+      magical piller activation animation_9: -1782857471
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
