@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class enemynoastar : MonoBehaviour
 {
-    public int health;
+    public float health;
 
  
     private Animator anim;
@@ -18,7 +18,7 @@ public class enemynoastar : MonoBehaviour
         anim = GetComponent<Animator>();
     }
 
-    public void takedamage(int damge)
+    public void takedamage(float damge)
     {
         enemy = GetComponent<enemyfollow>();
         
@@ -28,7 +28,7 @@ public class enemynoastar : MonoBehaviour
         if (transform.localScale.x == 1f)
             enemymove.position = new Vector2(enemymove.position.x - 0.5f, enemymove.position.y);
         anim.SetTrigger("hurt");
-        
+        health -= damge;
         enemy.speed = 0;
         
         if (health < 0)
@@ -38,7 +38,7 @@ public class enemynoastar : MonoBehaviour
         }
         Debug.Log("takedamge");
     }
-    public void takedamagefire(int damge)
+    public void takedamagefire(float damge)
     {
        
         anim.SetTrigger("hurt");

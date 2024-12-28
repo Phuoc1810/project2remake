@@ -4,19 +4,20 @@ using UnityEngine;
 
 public class hitbox : MonoBehaviour
 {
+    public playersat damge;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.CompareTag("miniboss"))
         {
             minibossnoastar minibossheath;
             minibossheath = collision.gameObject.GetComponent<minibossnoastar>();
-            minibossheath.takedamage(2);
+            minibossheath.takedamage(damge.attack);
         }
        else if (collision.CompareTag("enemy2"))
         {
             enemynoastar enemyheath;
             enemyheath = collision.gameObject.GetComponent<enemynoastar>();
-            enemyheath.takedamage(2);
+            enemyheath.takedamage(damge.attack);
 
         }
 

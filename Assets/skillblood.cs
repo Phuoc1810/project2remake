@@ -6,9 +6,11 @@ using UnityEngine;
 public class skillblood : MonoBehaviour
 {
     public int phantram;
-    
+    public playersat damgeskill;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
+
         if (collision.CompareTag("miniboss"))
         {
             
@@ -16,7 +18,7 @@ public class skillblood : MonoBehaviour
             bloodstatus = collision.gameObject.GetComponent<blood>();
             minibossnoastar minibossheath;
             minibossheath = collision.gameObject.GetComponent<minibossnoastar>();
-            minibossheath.takedamage(2);
+            minibossheath.takedamage(damgeskill.skill);
             bloodstatus.count++;
             if (bloodstatus.count <= 5)
                 bloodstatus.bloodstatus = true;
@@ -28,7 +30,7 @@ public class skillblood : MonoBehaviour
             bloodstatus = collision.gameObject.GetComponent<blood>();
             enemynoastar enemyheath;
             enemyheath = collision.gameObject.GetComponent<enemynoastar>();
-            enemyheath.takedamage(2);
+            enemyheath.takedamage(damgeskill.skill);
             bloodstatus.count++;
             if(bloodstatus.count<=5)
             bloodstatus.bloodstatus = true;

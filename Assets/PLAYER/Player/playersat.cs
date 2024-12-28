@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class playersat : MonoBehaviour
 {
@@ -9,10 +10,11 @@ public class playersat : MonoBehaviour
     public float currenthp = 100;
 
     public float maxmp = 100;
-    public float currentmp = 100;
+    public float currentmp =100;
 
-    public float defent = 10;
-    public float attack = 10;
+    public float defent = 5;
+    public float attack = 2;
+    public float skill = 2;
     [Header("lever")]
     public int level = 1;
 
@@ -22,6 +24,13 @@ public class playersat : MonoBehaviour
     public float hprecoverytime = 5f;
     public float mprecoverytime = 1f;
     public Animator anim;
+
+    [Header("stat setup")]
+    public Image hpstat;
+    public Image mpstat;
+    public Image attackstat;
+    public Image defstat;
+    public Image skilldamge;
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -36,6 +45,11 @@ public class playersat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        hpstat.fillAmount = maxhp / 1000;
+        mpstat.fillAmount = maxmp / 1000;
+        attackstat.fillAmount = attack / 10;
+        defstat.fillAmount = defent / 25;
+        skilldamge.fillAmount = skill / 10;
         if (currenthp < maxhp)
         {
             hprecoverytime -= Time.deltaTime;
