@@ -10,12 +10,13 @@ public class minibossnoastar : MonoBehaviour
     private Animator anim;
     public Transform enemymove;
     public miniboss boss;
-    
 
+    public GameObject wallHide;
     private void Start()
     {
         anim = GetComponent<Animator>();
         chest_Perfab.SetActive(false);
+        wallHide.SetActive(true);
     }
 
     public void takedamage(int damge)
@@ -61,7 +62,8 @@ public class minibossnoastar : MonoBehaviour
     }
     private IEnumerator ChestAppear()
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1);
         chest_Perfab.SetActive(true);
+        wallHide.SetActive(false);
     }
 }
