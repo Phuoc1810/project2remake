@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -15,6 +16,7 @@ public class playersat : MonoBehaviour
     public float defent = 5;
     public float attack = 2;
     public float skill = 2;
+    public float point;
     [Header("lever")]
     public int level = 1;
 
@@ -26,6 +28,7 @@ public class playersat : MonoBehaviour
     public Animator anim;
 
     [Header("stat setup")]
+    [SerializeField]public TextMeshProUGUI pointsetup;
     public Image hpstat;
     public Image mpstat;
     public Image attackstat;
@@ -33,6 +36,7 @@ public class playersat : MonoBehaviour
     public Image skilldamge;
     void Start()
     {
+        
         anim = GetComponent<Animator>();
         nextexp = new float[10];
         nextexp[0] = 100;
@@ -45,6 +49,7 @@ public class playersat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        pointsetup.text = point.ToString();
         hpstat.fillAmount = maxhp / 1000;
         mpstat.fillAmount = maxmp / 1000;
         attackstat.fillAmount = attack / 10;
@@ -99,6 +104,96 @@ public class playersat : MonoBehaviour
         if (damage < 0) damage = 0;
         player._instance.GetComponent<playersat>().currenthp -= damage;
 
+    }
+    public void uphp()
+    {
+        if (point > 0 && maxhp >= 100 && maxhp<=1000)
+        {
+            point -= 1;
+            maxhp += 100;
+            currenthp = maxhp;
+        }
+    }
+    public void upmp()
+    {
+        if (point >= 1 && maxmp >= 100 && maxmp<=1000)
+        {
+            point -= 1;
+            maxmp += 100;
+            currentmp = maxmp;
+        }
+    }
+    public void upattack()
+    {
+        if (point >= 1 && attack >= 2 && attack <= 10)
+        {
+            point -= 1;
+            attack += 1;
+           
+        }
+    }
+    public void updef()
+    {
+        if (point >= 1 && defent >= 5 && defent <= 25)
+        {
+            point -= 1;
+            defent += 5;
+
+        }
+    }
+    public void upskill ()
+    {
+        if (point >= 1 && skill >= 2 && skill <= 10)
+        {
+            point -= 1;
+            skill += 1;
+
+        }
+    }
+    public void downhp()
+    {
+        if (maxhp > 100 )
+        {
+            point += 1;
+            maxhp -= 100;
+            currenthp = maxhp;
+        }
+    }
+    public void downmp()
+    {
+        if (maxmp > 100)
+        {
+            point += 1;
+            maxmp -= 100;
+            currentmp = maxmp;
+        }
+    }
+    public void downattack()
+    {
+        if (attack > 2)
+        {
+            point += 1;
+            attack -= 1;
+            
+        }
+    }
+    public void downdef()
+    {
+        if (defent > 5)
+        {
+            point += 1;
+            defent -= 5;
+
+        }
+    }
+    public void downskill()
+    {
+        if (skill > 2)
+        {
+            point += 1;
+            skill -= 1;
+
+        }
     }
 }
 
