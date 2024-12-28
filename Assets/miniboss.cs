@@ -12,6 +12,7 @@ public class miniboss : MonoBehaviour
     public Animator anim;
     public float timetele=10;
     public GameObject playerposition;
+    public bool move = true;
     private void Start()
     {
         playerposition = GameObject.FindGameObjectWithTag("Player");
@@ -29,22 +30,29 @@ public class miniboss : MonoBehaviour
             {
                 lineOfSite *= 2;
             }
-            anim.SetTrigger("WALK");
-            transform.position = Vector2.MoveTowards(this.transform.position, player.position, speed * Time.deltaTime);
+            anim.SetTrigger("walk");
+            
+                transform.position = Vector2.MoveTowards(this.transform.position, player.position, speed * Time.deltaTime);
+            
             timetele -= Time.deltaTime;
             if (timetele <= 0)
             {
                 anim.SetTrigger("tele");
-                transform.position =playerposition.transform.position;
+                
             }
         }
         else
-            anim.SetTrigger("INDEL");
+            anim.SetTrigger("indel");
 
     }
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, lineOfSite);
+    }
+    public void tele()
+    {
+        transform.position = playerposition.transform.position;
+        timetele = 8;
     }
 }

@@ -6,8 +6,13 @@ public class hitbox : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        
-       if (collision.CompareTag("enemy2"))
+        if(collision.CompareTag("miniboss"))
+        {
+            minibossnoastar minibossheath;
+            minibossheath = collision.gameObject.GetComponent<minibossnoastar>();
+            minibossheath.takedamage(2);
+        }
+       else if (collision.CompareTag("enemy2"))
         {
             enemynoastar enemyheath;
             enemyheath = collision.gameObject.GetComponent<enemynoastar>();

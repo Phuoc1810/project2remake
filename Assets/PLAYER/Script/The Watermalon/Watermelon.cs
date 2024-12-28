@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class Watermelon : MonoBehaviour
 {
+
+    public static Watermelon instance;
+
     [Header("Watermelon setting")]
     public int maxWatermelon = 5; //chua toi da 5 mieng dua hau
     public int currentWatermelon = 0; //so luong dua hau hien tai
@@ -15,6 +18,18 @@ public class Watermelon : MonoBehaviour
 
     private playersat playerStats; //tham chieu den chi so player
 
+    void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
     void Start()
     {
         playerStats = FindObjectOfType<playersat>(); //lay sprite playersat
@@ -29,6 +44,7 @@ public class Watermelon : MonoBehaviour
         {
             currentWatermelon++;
             UpdateUI();
+            Debug.Log("Da nhan vat pham dua hau");
         }
         else
         {
@@ -61,7 +77,7 @@ public class Watermelon : MonoBehaviour
             Debug.Log("Mau da day, khong can su dung");
         }
     }
-    private void UpdateUI()
+    public void UpdateUI()
     {
         //cap nhat so luong dua hau tren UI
         if(watermelonCountText != null)

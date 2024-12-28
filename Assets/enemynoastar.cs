@@ -10,6 +10,8 @@ public class enemynoastar : MonoBehaviour
  
     private Animator anim;
     public Transform enemymove;
+  
+    public enemyfollow enemy;
 
     private void Start()
     {
@@ -18,12 +20,17 @@ public class enemynoastar : MonoBehaviour
 
     public void takedamage(int damge)
     {
+        enemy = GetComponent<enemyfollow>();
+        
+       
         if (transform.localScale.x == -1f)
             enemymove.position = new Vector2(enemymove.position.x + 0.5f, enemymove.position.y);
         if (transform.localScale.x == 1f)
             enemymove.position = new Vector2(enemymove.position.x - 0.5f, enemymove.position.y);
         anim.SetTrigger("hurt");
         health -= damge;
+        enemy.speed = 0;
+        
         if (health < 0)
         {
             anim.SetTrigger("die");
@@ -46,5 +53,10 @@ public class enemynoastar : MonoBehaviour
     public void die()
     {
         Destroy(gameObject);
+    }
+    public void ngangchuyendong()
+    {
+      
+        enemy.speed = 2;
     }
 }

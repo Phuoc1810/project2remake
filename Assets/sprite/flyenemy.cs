@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class flyenemy : MonoBehaviour
 {
+    public enemyfollow enemy;
+  
     [SerializeField] private float attackcooldown;
     [SerializeField] private float ranger;
     [SerializeField] private float ColliderDistance;
@@ -27,6 +29,9 @@ public class flyenemy : MonoBehaviour
     }
     private void Update()
     {
+
+        enemy = GetComponent<enemyfollow>();
+     
         cooldowntimer += Time.deltaTime;
         if (playerinsight())
         {
@@ -37,6 +42,8 @@ public class flyenemy : MonoBehaviour
                 cooldowntimer = 0;
                
                 anim.SetTrigger("attack1");
+               
+                enemy.speed = 0;
 
             }
         }
@@ -49,6 +56,8 @@ public class flyenemy : MonoBehaviour
                 cooldowntimer = 0;
                
                 anim.SetTrigger("attack2");
+              
+                enemy.speed = 0;
 
             }
         }

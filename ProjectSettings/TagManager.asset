@@ -11,6 +11,7 @@ TagManager:
   - Boss
   - enemy2
   - ground
+  - miniboss
   layers:
   - Default
   - TransparentFX
