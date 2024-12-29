@@ -225,6 +225,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 30
   enemymove: {fileID: 3714192773678886227}
+  enemy: {fileID: 0}
 --- !u!114 &7642793578202334200
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -283,7 +284,7 @@ Transform:
   m_GameObject: {fileID: 2867255812624172527}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -11.986013, y: -21.70658, z: 2.7183058}
+  m_LocalPosition: {x: 0.01, y: 0.85, z: 2.7183058}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -367,7 +368,7 @@ Transform:
   m_GameObject: {fileID: 5178976693844488449}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -11.986013, y: -21.70658, z: 2.7183058}
+  m_LocalPosition: {x: -0.02, y: 0.93, z: 2.7183058}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -482,7 +483,7 @@ Transform:
   m_GameObject: {fileID: 8051963144571471581}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -11.986013, y: -21.70658, z: 2.7183058}
+  m_LocalPosition: {x: 0.02, y: 0.73, z: 2.7183058}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -568,7 +569,7 @@ Transform:
   m_GameObject: {fileID: 9071501164250936519}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -11.986013, y: -21.70658, z: 2.7183058}
+  m_LocalPosition: {x: -0.01, y: 0.97, z: 2.7183058}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class minibossnoastar : MonoBehaviour
 {
-    public int health;
+    public float health;
     public GameObject chest_Perfab;
 
     private Animator anim;
@@ -18,7 +18,7 @@ public class minibossnoastar : MonoBehaviour
         chest_Perfab.SetActive(false);
     }
 
-    public void takedamage(int damge)
+    public void takedamage(float damge)
     {
         
 
@@ -40,7 +40,7 @@ public class minibossnoastar : MonoBehaviour
         }
         Debug.Log("takedamge");
     }
-    public void takedamagefire(int damge)
+    public void takedamagefire(float damge)
     {
 
         anim.SetTrigger("hurt");
