@@ -8,12 +8,11 @@ public class settingsat : MonoBehaviour
     public float lineOfSite = 2f;
    
     public Transform player;
-    public Rigidbody rb;
-    public Animator anim;
+
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
-        anim = GetComponent<Animator>();
+       
     }
     private void Update()
     {
@@ -21,10 +20,18 @@ public class settingsat : MonoBehaviour
         float distancefromplayer = Vector2.Distance(player.position, transform.position);
         if (distancefromplayer < lineOfSite)
         {
+
             if (Input.GetKeyDown(KeyCode.E))
+            {
+
                 pannel.SetActive(true);
+                Time.timeScale = 0;
+            }
             else if (Input.GetKeyDown(KeyCode.Escape))
+            {
                 pannel.SetActive(false);
+                Time.timeScale = 1;
+            }
 
         }
         
