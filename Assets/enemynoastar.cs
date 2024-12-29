@@ -13,6 +13,7 @@ public class enemynoastar : MonoBehaviour
   
     public enemyfollow enemy;
 
+    public int dropChancePercentage = 30;
     private void Start()
     {
         anim = GetComponent<Animator>();
@@ -34,6 +35,7 @@ public class enemynoastar : MonoBehaviour
         if (health < 0)
         {
             anim.SetTrigger("die");
+            TryDropItem();
 
         }
         Debug.Log("takedamge");
@@ -53,10 +55,19 @@ public class enemynoastar : MonoBehaviour
     public void die()
     {
         Destroy(gameObject);
+
     }
     public void ngangchuyendong()
     {
       
         enemy.speed = 2;
+    }
+    private void TryDropItem()
+    {
+        int randomValue = Random.Range(0, 100);
+        if(randomValue < dropChancePercentage)
+        {
+            Fish.instance.AddFish();
+        }
     }
 }

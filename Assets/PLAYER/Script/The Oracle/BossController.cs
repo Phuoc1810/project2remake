@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using UnityEditor.Build;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -17,7 +18,7 @@ public class BossController : MonoBehaviour
     //quan li chi so boss
     public int maxHeal = 200;
     private int currentHeal; //mau hien tai
-    public GameObject specialSkill; //ki nang dac biet
+    //public GameObject specialSkill; //ki nang dac biet
 
     //tham chieu den heal bar
     public Slider healSlider;
@@ -40,7 +41,7 @@ public class BossController : MonoBehaviour
             healSlider.value = currentHeal;
         }
 
-        specialSkill.SetActive(false);
+        //specialSkill.SetActive(false);
         GameObject player = GameObject.FindWithTag("Player");
         if (player != null)
         {
@@ -71,6 +72,20 @@ public class BossController : MonoBehaviour
         StartCoroutine(SpawmTiles());
     }
 
+    private IEnumerator AttackPhases()
+    {
+        yield return new WaitForSeconds(timeStart);
+        //giai doan 2 (khi mau <= 60%)
+        while (currentHeal >= maxHeal * 0.6f)
+        {
+            yield return StartCoroutine(PhaseTwoMachanic());
+        }
+        //giai doan 3 (khi mau <= 30%)
+        while (currentHeal  >= maxHeal * 0.3f && currentHeal > 0)
+        {
+            yield return StartCoroutine(PhareThreeMechanic());
+        }
+    }
     private IEnumerator SpawmTiles()
     {
         Debug.Log("Starting to spawn tiles...");
@@ -106,6 +121,71 @@ public class BossController : MonoBehaviour
             yield return new WaitForSeconds(3); //dot tan con tiep theo
         }
     }
+
+    //giai doan 2
+    private IEnumerator PhaseTwoMachanic()
+    {
+        while (isAttacking)
+        {
+            yield return new WaitForSeconds(1); //delay truoc khi bat dau giai doan 2
+            animator.SetTrigger("Attack1");
+
+            //spawm cac o vuong xung quanh nguoi choi
+            for(int i = 0; i < numberOfTile; i++)
+            {
+                Vector3 ramdomOffset = Random.insideUnitCircle * 3f; //vi tri ngau nhien trong ban kinh 3 don vi xung quanh nguoi choi
+                Vector3 tilePosition = playerTransform.position + ramdomOffset;
+
+                //tao o vuong tai vi tri da tinh toan
+                GameObject tile = Instantiate(explosiveTilePerfab, tilePosition, Quaternion.identity);
+                tile.GetComponent<ExplosiveTile>().Initialize(playerTransform.position);
+            }
+            animator.SetTrigger("Indle");
+            yield return new WaitForSeconds(3);
+        }
+    }
+
+    //Giai doan 3
+    private IEnumerator PhareThreeMechanic()
+    {
+        while (isAttacking)
+        {
+            yield return new WaitForSeconds(1);
+            animator.SetTrigger("Attack1");
+
+            //lay toan bo san dau va xac dinh vung an toan
+            Vector3 arenaCenter = transform.position; //Gia dinh boss o giua san dau
+            float arenaSize = 6f; //gioi gan san dau (gia dinh 6x6)
+            int safeTile = 5; //so luong o vuong an toan
+
+            HashSet<Vector3> safeZones = new HashSet<Vector3>();
+            while (safeZones.Count < safeTile)
+            {
+                Vector3 safePosition = arenaCenter + new Vector3(
+                    Random.Range(-arenaSize, arenaSize),
+                    Random.Range(-arenaSize, arenaSize),
+                    0
+                );
+                safeZones.Add(safePosition);
+            }
+
+            //spawn o vuong tren mat dat, ngoai tru vung an toan
+            for(float x = - arenaSize; x <= arenaSize; x += 1.5f)
+            {
+                for (float y = - arenaSize; y <= arenaSize; y += 1.5f)
+                {
+                    Vector3 tilePoision = arenaCenter + new Vector3(x, y, 0);
+                    if (!safeZones.Contains(tilePoision))
+                    {
+                        GameObject tile = Instantiate(explosiveTilePerfab, tilePoision, Quaternion.identity);
+                        tile.GetComponent<ExplosiveTile>().Initialize(playerTransform.position);
+                    }
+                }
+            }
+        }
+        animator.SetTrigger("Indle");
+        yield return new WaitForSeconds(3);
+    }
     //ham giam mau cua boss
     public void TakeDamage()
     {
@@ -123,10 +203,10 @@ public class BossController : MonoBehaviour
         }
 
         //kich hoat ki nang dac biet khi mau <= 30%
-        if(currentHeal <= maxHeal * 0.3 && !isSpecialSkillColdDown && specialSkill != null && !specialSkill.activeSelf)
-        {
-            StartCoroutine(ActivateSpecialSkill());
-        }
+        //if(currentHeal <= maxHeal * 0.3 && !isSpecialSkillColdDown && specialSkill != null && !specialSkill.activeSelf)
+        
+            //StartCoroutine(ActivateSpecialSkill());
+        
 
         //kiem tra neu mau <= 0
         if(currentHeal <= 0)
@@ -134,7 +214,7 @@ public class BossController : MonoBehaviour
             isAttacking = false;
             animator.ResetTrigger("Attack1");
             Die();
-            specialSkill.SetActive(false);
+            //specialSkill.SetActive(false);
         }
     }
 
@@ -152,17 +232,17 @@ public class BossController : MonoBehaviour
     }
 
     //goi special skill
-    private IEnumerator ActivateSpecialSkill()
-    {
-        specialSkill.SetActive(true);
-        Debug.Log("special skill is active");
-        yield return new WaitForSeconds(0.4f);
-        specialSkill.SetActive(false);
+    //private IEnumerator ActivateSpecialSkill()
+    //{
+       // specialSkill.SetActive(true);
+       // Debug.Log("special skill is active");
+        //yield return new WaitForSeconds(0.4f);
+       // specialSkill.SetActive(false);
 
-        isSpecialSkillColdDown = true;
-        yield return new WaitForSeconds(4);
-        isSpecialSkillColdDown = false;
-    }
+        //isSpecialSkillColdDown = true;
+       // yield return new WaitForSeconds(4);
+       // isSpecialSkillColdDown = false;
+    //}
     //xu li logic khi boss chet
     private void Die()
     {
