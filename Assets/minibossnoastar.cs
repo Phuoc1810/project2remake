@@ -5,18 +5,16 @@ using UnityEngine;
 public class minibossnoastar : MonoBehaviour
 {
     public float health;
-    public GameObject chest_Perfab;
+
 
     private Animator anim;
     public Transform enemymove;
     public miniboss boss;
+    
 
-    public GameObject wallHide;
     private void Start()
     {
         anim = GetComponent<Animator>();
-        chest_Perfab.SetActive(false);
-        wallHide.SetActive(true);
     }
 
     public void takedamage(float damge)
@@ -36,7 +34,6 @@ public class minibossnoastar : MonoBehaviour
         if (health < 0)
         {
             anim.SetTrigger("die");
-            StartCoroutine(ChestAppear());
 
         }
         Debug.Log("takedamge");
@@ -45,9 +42,11 @@ public class minibossnoastar : MonoBehaviour
     {
 
         anim.SetTrigger("hurt");
+        health -= damge;
         if (health <= 0)
         {
             anim.SetTrigger("die");
+
         }
 
     }
@@ -59,11 +58,5 @@ public class minibossnoastar : MonoBehaviour
     {
         boss.speed = 3;
         
-    }
-    private IEnumerator ChestAppear()
-    {
-        yield return new WaitForSeconds(1);
-        chest_Perfab.SetActive(true);
-        wallHide.SetActive(false);
     }
 }

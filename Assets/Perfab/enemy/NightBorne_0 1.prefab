@@ -273,9 +273,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2a4031412f9edc43b38bc9abd7235c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 50
-  chest_Perfab: {fileID: 3015307079565468983, guid: 9dd68d3418c4b014d839c31c9e2785a9,
-    type: 3}
+  health: 30
   enemymove: {fileID: 1800012560810324611}
   boss: {fileID: 5959246110328234282}
 --- !u!114 &2626269427206385917
@@ -313,7 +311,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6036738145859065922}
   - component: {fileID: 3737592189589924026}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: fire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -397,7 +395,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8981118471697392805}
   - component: {fileID: 1183807834381903134}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: blood (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -481,7 +479,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5955337385500669146}
   - component: {fileID: 8897326555048410206}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: blood
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -565,7 +563,7 @@ GameObject:
   m_Component:
   - component: {fileID: 510100212809604160}
   - component: {fileID: 6187482190142364863}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: blood (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -651,7 +649,7 @@ GameObject:
   - component: {fileID: 1129125240294539397}
   - component: {fileID: 5764559790770627578}
   - component: {fileID: 2537277490227036068}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: blood (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
