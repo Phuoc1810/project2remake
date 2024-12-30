@@ -116,7 +116,7 @@ MonoBehaviour:
   bullet: {fileID: 2443424072229630134, guid: 8b8d98f00304ad3448e3e9c99da2bf9f, type: 3}
   buttetparent: {fileID: 5629410991604404149}
   anim: {fileID: 0}
-  firerate: 1
+  firerate: 4
   nextfiretime: 0
 --- !u!95 &5762479698301490048
 Animator:

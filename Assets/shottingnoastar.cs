@@ -55,7 +55,7 @@ public class shottingnoastar : MonoBehaviour
     }
     public void die()
     {
-        Point.GetComponent<playersat>().point += 0.2f;
+        Point.GetComponent<playersat>().point += 1f;
         Destroy(gameObject);
     }
     public void ngangchuyendong()
