@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class hitskill : MonoBehaviour
 {
-    public playersat damgeskill;
+    public playersat damge;
     public int phantram;
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -18,7 +18,7 @@ public class hitskill : MonoBehaviour
             burnfire = collision.gameObject.GetComponent<burnminiboss>();
             minibossnoastar minibossheath;
             minibossheath = collision.gameObject.GetComponent<minibossnoastar>();
-            minibossheath.takedamage(damgeskill.skill);
+            minibossheath.takedamage(damge.skill);
             if (phantram == 1 || phantram == 2 || phantram == 3 || phantram == 4)
                 burnfire.chay = true;
         }
@@ -29,7 +29,7 @@ public class hitskill : MonoBehaviour
             burnfire = collision.gameObject.GetComponent<burn>();
             enemynoastar enemyheath;
             enemyheath = collision.gameObject.GetComponent<enemynoastar>();
-            enemyheath.takedamage(damgeskill.skill);
+            enemyheath.takedamage(damge.skill);
             if (phantram == 1 || phantram == 2 || phantram == 3 || phantram == 4)
                 burnfire.chay = true;
         }

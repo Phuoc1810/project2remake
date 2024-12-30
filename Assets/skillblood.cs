@@ -42,7 +42,7 @@ public class skillblood : MonoBehaviour
             bloodstatus = collision.gameObject.GetComponent<bloodbat>();
             enemybatnoastar enemyheath;
             enemyheath = collision.gameObject.GetComponent<enemybatnoastar>();
-            enemyheath.takedamage(damge.skill);
+            enemyheath.takedamage(damgeskill.skill);
             bloodstatus.count++;
             
                 bloodstatus.bloodstatus = true;
@@ -54,7 +54,7 @@ public class skillblood : MonoBehaviour
             bloodstatus = collision.gameObject.GetComponent<shottingblood>();
             shottingnoastar enemyheath;
             enemyheath = collision.gameObject.GetComponent<shottingnoastar>();
-            enemyheath.takedamage(damge.skill);
+            enemyheath.takedamage(damgeskill.skill);
             bloodstatus.count++;
 
             bloodstatus.bloodstatus = true;
