@@ -32,7 +32,9 @@ public class SHOOTINGPLAYER : MonoBehaviour
         }
         else if(distancefromplayer <= shootingranger && nextfiretime< Time.time)
        {
+            speed = 0;
             anim.SetTrigger("shoot");
+           
             bullet.transform.localScale = transform.localScale;
             Instantiate(bullet, buttetparent.transform.position, Quaternion.identity);
             nextfiretime = Time.time + firerate;

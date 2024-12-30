@@ -13,13 +13,13 @@ public class skillblood : MonoBehaviour
         if (collision.CompareTag("miniboss"))
         {
             
-            blood bloodstatus;
-            bloodstatus = collision.gameObject.GetComponent<blood>();
+            bloodminiboss bloodstatus;
+            bloodstatus = collision.gameObject.GetComponent<bloodminiboss>();
             minibossnoastar minibossheath;
             minibossheath = collision.gameObject.GetComponent<minibossnoastar>();
             minibossheath.takedamage(damge.skill);
             bloodstatus.count++;
-            if (bloodstatus.count <= 5)
+            
                 bloodstatus.bloodstatus = true;
         }
         if (collision.CompareTag("enemy2"))
@@ -31,10 +31,32 @@ public class skillblood : MonoBehaviour
             enemyheath = collision.gameObject.GetComponent<enemynoastar>();
             enemyheath.takedamage(damge.skill);
             bloodstatus.count++;
-            if(bloodstatus.count<=5)
+        
             bloodstatus.bloodstatus = true;
+        }
+        if (collision.CompareTag("bat"))
+        {
 
+            bloodbat bloodstatus;
+            bloodstatus = collision.gameObject.GetComponent<bloodbat>();
+            enemybatnoastar enemyheath;
+            enemyheath = collision.gameObject.GetComponent<enemybatnoastar>();
+            enemyheath.takedamage(damge.skill);
+            bloodstatus.count++;
+            
+                bloodstatus.bloodstatus = true;
+        }
+        if (collision.CompareTag("worn"))
+        {
 
+            shottingblood bloodstatus;
+            bloodstatus = collision.gameObject.GetComponent<shottingblood>();
+            shottingnoastar enemyheath;
+            enemyheath = collision.gameObject.GetComponent<shottingnoastar>();
+            enemyheath.takedamage(damge.skill);
+            bloodstatus.count++;
+
+            bloodstatus.bloodstatus = true;
         }
         //tan cong boss 
         if (collision.CompareTag("Boss"))

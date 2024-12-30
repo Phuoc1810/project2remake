@@ -13,8 +13,10 @@ public class miniboss : MonoBehaviour
     public float timetele=10;
     public GameObject playerposition;
     public bool move = true;
+
     private void Start()
     {
+
         playerposition = GameObject.FindGameObjectWithTag("Player");
         player = GameObject.FindGameObjectWithTag("Player").transform;
         anim = GetComponent<Animator>();

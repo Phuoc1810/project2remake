@@ -1,17 +1,16 @@
-using Pathfinding;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class enemynoastar : MonoBehaviour
+public class shottingnoastar : MonoBehaviour
 {
     public float health;
 
- 
+
     private Animator anim;
     public Transform enemymove;
-  
-    public enemyfollow enemy;
+
+    public SHOOTINGPLAYER enemy;
     public GameObject Point;
     private void Start()
     {
@@ -21,9 +20,9 @@ public class enemynoastar : MonoBehaviour
 
     public void takedamage(float damge)
     {
-        enemy = GetComponent<enemyfollow>();
-        
-       
+        enemy = GetComponent<SHOOTINGPLAYER>();
+
+
         if (transform.localScale.x == -1f)
             enemymove.position = new Vector2(enemymove.position.x + 0.5f, enemymove.position.y);
         if (transform.localScale.x == 1f)
@@ -31,7 +30,7 @@ public class enemynoastar : MonoBehaviour
         anim.SetTrigger("hurt");
         health -= damge;
         enemy.speed = 0;
-        
+
         if (health < 0)
         {
             anim.SetTrigger("die");
@@ -41,18 +40,18 @@ public class enemynoastar : MonoBehaviour
     }
     public void takedamagefire(float damge)
     {
-       
+
         anim.SetTrigger("hurt");
         health -= damge;
         if (health <= 0)
         {
-           
-            
-            anim.SetTrigger("die");     
-            
-                
+
+
+            anim.SetTrigger("die");
+
+
         }
-        
+
     }
     public void die()
     {
@@ -61,7 +60,7 @@ public class enemynoastar : MonoBehaviour
     }
     public void ngangchuyendong()
     {
-      
+
         enemy.speed = 2;
     }
 }

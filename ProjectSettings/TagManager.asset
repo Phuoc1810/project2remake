@@ -12,6 +12,8 @@ TagManager:
   - enemy2
   - ground
   - miniboss
+  - bat
+  - worn
   layers:
   - Default
   - TransparentFX

@@ -10,10 +10,11 @@ public class minibossnoastar : MonoBehaviour
     private Animator anim;
     public Transform enemymove;
     public miniboss boss;
-    
+    public GameObject Point;
 
     private void Start()
     {
+        Point = GameObject.FindGameObjectWithTag("Player");
         anim = GetComponent<Animator>();
         chest_Perfab.SetActive(false);
     }
@@ -52,6 +53,7 @@ public class minibossnoastar : MonoBehaviour
     }
     public void die()
     {
+        Point.GetComponent<playersat>().point += 2;
         Destroy(gameObject);
     }
     public void ngangchuyendong()

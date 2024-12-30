@@ -15,10 +15,11 @@ GameObject:
   - component: {fileID: 4397908224229623082}
   - component: {fileID: 5959246110328234282}
   - component: {fileID: 3733147193008692661}
-  - component: {fileID: 3021392256306956745}
   - component: {fileID: 84731264882858247}
   - component: {fileID: 4131265431315311869}
   - component: {fileID: 2626269427206385917}
+  - component: {fileID: 4644523375111764706}
+  - component: {fileID: 2869669804180658512}
   m_Layer: 10
   m_Name: NightBorne_0 1
   m_TagString: miniboss
@@ -229,24 +230,6 @@ MonoBehaviour:
   firetime: 5
   count: 0
   fire: {fileID: 2891685835092509886}
---- !u!114 &3021392256306956745
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1649266580292811648}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9fe8adba1d5cef04e8914dabedf39c28, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bloodstatus: 0
-  count: 0
-  blood1: {fileID: 5909196817886500344}
-  blood2: {fileID: 7118765907192659783}
-  blood3: {fileID: 5414597638752840421}
-  blood4: {fileID: 7840905381612462357}
 --- !u!114 &84731264882858247
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -278,6 +261,7 @@ MonoBehaviour:
     type: 3}
   enemymove: {fileID: 1800012560810324611}
   boss: {fileID: 5959246110328234282}
+  Point: {fileID: 0}
 --- !u!114 &2626269427206385917
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -303,6 +287,41 @@ MonoBehaviour:
     m_Bits: 128
   attacksound: {fileID: 0}
   enemypatroll: {fileID: 0}
+--- !u!114 &4644523375111764706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1649266580292811648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b6a399ff0568304abdaa77f18001994, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chay: 0
+  cooldown: 0
+  firetime: 5
+  count: 0
+  fire: {fileID: 2891685835092509886}
+--- !u!114 &2869669804180658512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1649266580292811648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5eb7e4e9d855c43418c2161487fc5ad1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bloodstatus: 0
+  count: 0
+  blood1: {fileID: 5909196817886500344}
+  blood2: {fileID: 7118765907192659783}
+  blood3: {fileID: 5414597638752840421}
+  blood4: {fileID: 7840905381612462357}
 --- !u!1 &2891685835092509886
 GameObject:
   m_ObjectHideFlags: 0
@@ -758,4 +777,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe043ace3cfa54d4aadb6d0f5e2259be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blood: {fileID: 0}
+  blood: {fileID: 7840905381612462357}

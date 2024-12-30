@@ -371,7 +371,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe043ace3cfa54d4aadb6d0f5e2259be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blood: {fileID: 0}
+  blood: {fileID: 7228873073548554435}
 --- !u!1 &8365285463976091942
 GameObject:
   m_ObjectHideFlags: 0
@@ -385,15 +385,15 @@ GameObject:
   - component: {fileID: 966871205091132442}
   - component: {fileID: 3979437776587036499}
   - component: {fileID: 3612499765722680623}
-  - component: {fileID: 6825505411973878409}
   - component: {fileID: 8565798456238326734}
   - component: {fileID: 8001749715371924042}
-  - component: {fileID: 2172522152006994906}
-  - component: {fileID: 1352829408557673197}
-  - component: {fileID: 4445477153074841236}
+  - component: {fileID: 4362841498792850641}
+  - component: {fileID: 7308272793611696991}
+  - component: {fileID: 1815867954237979251}
+  - component: {fileID: 7001508877028846948}
   m_Layer: 10
   m_Name: Bat-Sleep_0
-  m_TagString: enemy2
+  m_TagString: bat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -523,31 +523,6 @@ MonoBehaviour:
   player: {fileID: 0}
   rb: {fileID: 0}
   anim: {fileID: 0}
---- !u!114 &6825505411973878409
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8365285463976091942}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b62405a2ab5989949bbd809d391f6ac5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemy: {fileID: 0}
-  attackcooldown: 3
-  ranger: 1.13
-  ColliderDistance: 0.51
-  ranger2: 0.92
-  ColliderDistance2: -0.57
-  damage: 2
-  boxcollider: {fileID: 8565798456238326734}
-  playerlayer:
-    serializedVersion: 2
-    m_Bits: 128
-  attacksound: {fileID: 0}
-  enemypatroll: {fileID: 0}
 --- !u!61 &8565798456238326734
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -620,7 +595,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &2172522152006994906
+--- !u!114 &4362841498792850641
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -629,13 +604,39 @@ MonoBehaviour:
   m_GameObject: {fileID: 8365285463976091942}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9013e9b6a6007f4ebf77c56e7dbd735, type: 3}
+  m_Script: {fileID: 11500000, guid: 9bd1cd595e47fb64da9c18d6f63368ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 3612499765722680623}
+  attackcooldown: 3
+  ranger: 1.04
+  ColliderDistance: 0.59
+  ranger2: 1.04
+  ColliderDistance2: -0.54
+  damage: 2
+  boxcollider: {fileID: 8565798456238326734}
+  playerlayer:
+    serializedVersion: 2
+    m_Bits: 128
+  attacksound: {fileID: 0}
+  enemypatroll: {fileID: 0}
+--- !u!114 &7308272793611696991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8365285463976091942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa13d7c08a9fe654baf16986820ec054, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   health: 20
   enemymove: {fileID: 9175432980789118508}
-  enemy: {fileID: 0}
---- !u!114 &1352829408557673197
+  enemy: {fileID: 3612499765722680623}
+  Point: {fileID: 0}
+--- !u!114 &1815867954237979251
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -644,7 +645,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8365285463976091942}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f84f5958053d2364e820b93b9f4dcf80, type: 3}
+  m_Script: {fileID: 11500000, guid: ee6a5277906c57a468435092c0d20b17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   chay: 0
@@ -652,7 +653,7 @@ MonoBehaviour:
   firetime: 5
   count: 0
   fire: {fileID: 6384738608070494394}
---- !u!114 &4445477153074841236
+--- !u!114 &7001508877028846948
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -661,7 +662,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8365285463976091942}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9fe8adba1d5cef04e8914dabedf39c28, type: 3}
+  m_Script: {fileID: 11500000, guid: 0e1c0271db6997342b574f8f27114d0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   bloodstatus: 0
