@@ -333,6 +333,7 @@ MonoBehaviour:
   health: 30
   enemymove: {fileID: 8917693019907617632}
   enemy: {fileID: 2776384566189986852}
+  Point: {fileID: 0}
 --- !u!114 &477361166268520752
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -669,7 +670,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe043ace3cfa54d4aadb6d0f5e2259be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blood: {fileID: 0}
+  blood: {fileID: 7249073080562604831}
 --- !u!1 &9223017042838894613
 GameObject:
   m_ObjectHideFlags: 0

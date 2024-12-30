@@ -20,6 +20,18 @@ public class hitbox : MonoBehaviour
             enemyheath.takedamage(damge.attack);
 
         }
+        else if(collision.CompareTag("bat"))
+        {
+            enemybatnoastar enemyheath;
+            enemyheath = collision.gameObject.GetComponent<enemybatnoastar>();
+            enemyheath.takedamage(damge.attack);
+        }
+        else if (collision.CompareTag("worn"))
+        {
+            shottingnoastar enemyheath;
+            enemyheath = collision.gameObject.GetComponent<shottingnoastar>();
+            enemyheath.takedamage(damge.attack);
+        }
 
         //tan cong boss 
         if (collision.CompareTag("Boss"))

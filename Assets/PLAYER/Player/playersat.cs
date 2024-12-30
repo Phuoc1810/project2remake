@@ -195,5 +195,10 @@ public class playersat : MonoBehaviour
 
         }
     }
+    public void uppoint()
+    {
+        point += 1;
+    }
+    
 }
 
