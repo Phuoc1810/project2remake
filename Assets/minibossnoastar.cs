@@ -11,10 +11,13 @@ public class minibossnoastar : MonoBehaviour
     public Transform enemymove;
     public miniboss boss;
     
-
+    public GameObject chest;
+    public GameObject wall;
     private void Start()
     {
         anim = GetComponent<Animator>();
+        chest.SetActive(false);
+        wall.SetActive(true);
     }
 
     public void takedamage(float damge)
@@ -34,7 +37,8 @@ public class minibossnoastar : MonoBehaviour
         if (health < 0)
         {
             anim.SetTrigger("die");
-
+            chest.SetActive(true);
+            wall.SetActive(false);
         }
         Debug.Log("takedamge");
     }
