@@ -5,11 +5,12 @@ using UnityEngine;
 
 public class skillblood : MonoBehaviour
 {
-    public playersat damge;
     public int phantram;
-    
+    public playersat damgeskill;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
+
         if (collision.CompareTag("miniboss"))
         {
             
@@ -17,7 +18,7 @@ public class skillblood : MonoBehaviour
             bloodstatus = collision.gameObject.GetComponent<bloodminiboss>();
             minibossnoastar minibossheath;
             minibossheath = collision.gameObject.GetComponent<minibossnoastar>();
-            minibossheath.takedamage(damge.skill);
+            minibossheath.takedamage(damgeskill.skill);
             bloodstatus.count++;
             
                 bloodstatus.bloodstatus = true;
@@ -29,7 +30,7 @@ public class skillblood : MonoBehaviour
             bloodstatus = collision.gameObject.GetComponent<blood>();
             enemynoastar enemyheath;
             enemyheath = collision.gameObject.GetComponent<enemynoastar>();
-            enemyheath.takedamage(damge.skill);
+            enemyheath.takedamage(damgeskill.skill);
             bloodstatus.count++;
         
             bloodstatus.bloodstatus = true;
@@ -41,7 +42,7 @@ public class skillblood : MonoBehaviour
             bloodstatus = collision.gameObject.GetComponent<bloodbat>();
             enemybatnoastar enemyheath;
             enemyheath = collision.gameObject.GetComponent<enemybatnoastar>();
-            enemyheath.takedamage(damge.skill);
+            enemyheath.takedamage(damgeskill.skill);
             bloodstatus.count++;
             
                 bloodstatus.bloodstatus = true;
@@ -53,7 +54,7 @@ public class skillblood : MonoBehaviour
             bloodstatus = collision.gameObject.GetComponent<shottingblood>();
             shottingnoastar enemyheath;
             enemyheath = collision.gameObject.GetComponent<shottingnoastar>();
-            enemyheath.takedamage(damge.skill);
+            enemyheath.takedamage(damgeskill.skill);
             bloodstatus.count++;
 
             bloodstatus.bloodstatus = true;

@@ -5,10 +5,8 @@ using UnityEngine;
 public class hitbox : MonoBehaviour
 {
     public playersat damge;
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
-
         if(collision.CompareTag("miniboss"))
         {
             minibossnoastar minibossheath;
