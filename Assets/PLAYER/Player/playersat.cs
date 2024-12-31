@@ -7,16 +7,16 @@ using UnityEngine.UI;
 public class playersat : MonoBehaviour
 {
     [Header("stat")]
+    public float point = 2;
     public float maxhp = 100;
     public float currenthp = 100;
 
     public float maxmp = 100;
-    public float currentmp =100;
+    public float currentmp = 100;
 
     public float defent = 5;
     public float attack = 2;
     public float skill = 2;
-    public float point;
     [Header("lever")]
     public int level = 1;
 
@@ -27,16 +27,16 @@ public class playersat : MonoBehaviour
     public float mprecoverytime = 1f;
     public Animator anim;
 
-    [Header("stat setup")]
-    [SerializeField]public TextMeshProUGUI pointsetup;
+    [Header("STAT")]
     public Image hpstat;
     public Image mpstat;
-    public Image attackstat;
+    public Image atkstat;
     public Image defstat;
-    public Image skilldamge;
+    public Image skillstat;
+    public TextMeshProUGUI pointstat;
+
     void Start()
     {
-        
         anim = GetComponent<Animator>();
         nextexp = new float[10];
         nextexp[0] = 100;
@@ -49,12 +49,12 @@ public class playersat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        pointsetup.text = point.ToString();
+        pointstat.text = point.ToString();
         hpstat.fillAmount = maxhp / 1000;
         mpstat.fillAmount = maxmp / 1000;
-        attackstat.fillAmount = attack / 10;
         defstat.fillAmount = defent / 25;
-        skilldamge.fillAmount = skill / 10;
+        atkstat.fillAmount = attack / 10;
+        skillstat.fillAmount = skill / 10;
         if (currenthp < maxhp)
         {
             hprecoverytime -= Time.deltaTime;
@@ -107,55 +107,55 @@ public class playersat : MonoBehaviour
     }
     public void uphp()
     {
-        if (point > 0 && maxhp >= 100 && maxhp<=1000)
+        if (point >= 1 && maxhp < 1000)
         {
-            point -= 1;
             maxhp += 100;
+            point -= 1;
             currenthp = maxhp;
         }
     }
     public void upmp()
     {
-        if (point >= 1 && maxmp >= 100 && maxmp<=1000)
+        if (point >= 1 && maxmp < 1000)
         {
-            point -= 1;
             maxmp += 100;
+            point -= 1;
             currentmp = maxmp;
         }
     }
-    public void upattack()
+    public void upatk()
     {
-        if (point >= 1 && attack >= 2 && attack <= 10)
+        if (point >= 1 && attack < 10)
         {
-            point -= 1;
             attack += 1;
-           
+            point -= 1;
+
         }
     }
     public void updef()
     {
-        if (point >= 1 && defent >= 5 && defent <= 25)
+        if (point >= 1 && defent < 25)
         {
-            point -= 1;
             defent += 5;
+            point -= 1;
 
         }
     }
-    public void upskill ()
+    public void upskill()
     {
-        if (point >= 1 && skill >= 2 && skill <= 10)
+        if (point >= 1 && skill < 10)
         {
-            point -= 1;
             skill += 1;
+            point -= 1;
 
         }
     }
     public void downhp()
     {
-        if (maxhp > 100 )
+        if (maxhp > 100)
         {
-            point += 1;
             maxhp -= 100;
+            point += 1;
             currenthp = maxhp;
         }
     }
@@ -163,26 +163,17 @@ public class playersat : MonoBehaviour
     {
         if (maxmp > 100)
         {
-            point += 1;
             maxmp -= 100;
+            point += 1;
             currentmp = maxmp;
         }
     }
-    public void downattack()
+    public void downatk()
     {
         if (attack > 2)
         {
-            point += 1;
             attack -= 1;
-            
-        }
-    }
-    public void downdef()
-    {
-        if (defent > 5)
-        {
             point += 1;
-            defent -= 5;
 
         }
     }
@@ -190,8 +181,17 @@ public class playersat : MonoBehaviour
     {
         if (skill > 2)
         {
-            point += 1;
             skill -= 1;
+            point += 1;
+
+        }
+    }
+    public void downdef()
+    {
+        if (defent > 5)
+        {
+            defent -= 5;
+            point += 1;
 
         }
     }
@@ -199,6 +199,5 @@ public class playersat : MonoBehaviour
     {
         point += 1;
     }
-    
-}
 
+}
