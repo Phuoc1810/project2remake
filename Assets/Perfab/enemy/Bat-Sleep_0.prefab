@@ -1027,7 +1027,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa13d7c08a9fe654baf16986820ec054, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxhealth: 20
   health: 20
+  healthbar: {fileID: 7669461958859466767}
   enemymove: {fileID: 9175432980789118508}
   enemy: {fileID: 3612499765722680623}
   Point: {fileID: 0}
